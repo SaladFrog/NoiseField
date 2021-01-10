@@ -52,7 +52,7 @@ function drawGrid() {
             context.beginPath();
             context.lineTo(0, 0);
             context.lineTo(scale, 0);
-            context.lineWidth = 2;
+            context.lineWidth = 1;
             context.stroke();
             context.restore();
         }
