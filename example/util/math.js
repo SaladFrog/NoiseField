@@ -1,7 +1,5 @@
-// var defined = require('defined');
-import defined from 'defined'
-import wrap from './wrap'
-// var wrap = require('./wrap');
+import defined from 'defined';
+import wrap from './wrap';
 
 var EPSILON = Number.EPSILON;
 
