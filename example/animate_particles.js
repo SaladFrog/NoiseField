@@ -7,7 +7,7 @@ const context = canvas.getContext('2d');
 var width = canvas.width = 400;
 var height = canvas.height = 400;
 
-var incriment = 0.01;
+var incriment = 0.04;
 var scale = 10;
 var columns, rows;
 var noiseZ = 0;
@@ -57,7 +57,7 @@ function drawGrid() {
             context.restore();
         }
         yoff += incriment;
-        noiseZ += 0.0003;
+        noiseZ += 0.0002;
     }
 
     for (let i = 0; i < particles.length; i++) {
@@ -74,8 +74,8 @@ function drawGrid() {
         vec2.add(p.vel, p.vel, p.acc);
         vec2.limit(p.vel, p.vel, p.maxSpeed);
         vec2.add(p.pos, p.pos, p.vel);
-        vec2.normalize(p.acc, p.acc);
-        // vec2.mul(p.acc, p.acc, [0, 0]);
+        // vec2.normalize(p.acc, p.acc);
+        vec2.mul(p.acc, p.acc, [0, 0]);
 
         context.fillStyle = 'red';
         context.fillRect(p.pos[0], p.pos[1], p.size, p.size);
@@ -102,7 +102,7 @@ function Particle() {
     this.vel = vec2.create();
     this.acc = vec2.create();
     this.size = 8;
-    this.maxSpeed = 4;
+    this.maxSpeed = 2;
     this.prevPos = vec2.copy([], this.pos);
 }
 
