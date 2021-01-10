@@ -18,7 +18,7 @@ rows = Math.floor(height / scale);
 var flowfield = new Array(columns * rows);
 
 var particles = [];
-for (var i = 0; i < 300; i++) {
+for (var i = 0; i < 500; i++) {
     particles[i] = new Particle();
 }
 
@@ -52,7 +52,7 @@ function drawGrid() {
             context.beginPath();
             context.lineTo(0, 0);
             context.lineTo(scale, 0);
-            context.lineWidth = 1;
+            context.lineWidth = 0.5;
             context.stroke();
             context.restore();
         }
@@ -101,7 +101,7 @@ function Particle() {
     this.pos = vec2.fromValues(Math.random() * width, Math.random() * height);
     this.vel = vec2.create();
     this.acc = vec2.create();
-    this.size = 8;
+    this.size = 5;
     this.maxSpeed = 2;
     this.prevPos = vec2.copy([], this.pos);
 }
