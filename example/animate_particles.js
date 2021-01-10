@@ -75,7 +75,7 @@ function drawGrid() {
         vec2.add(p.vel, p.vel, p.acc);
         vec2.limit(p.vel, p.vel, p.maxSpeed);
         vec2.add(p.pos, p.pos, p.vel);
-        vec2.normalize(p.acc, p.acc)
+        vec2.normalize(p.acc, p.acc);
         // vec2.mul(p.acc, p.acc, [0, 0]);
 
         context.fillStyle = 'red';
