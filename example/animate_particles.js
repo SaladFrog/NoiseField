@@ -47,6 +47,7 @@ function drawGrid() {
             flowfield[index] = v;
             xoff += incriment;
 
+            // bit laggy when on at the same time as particles
             context.save();
             context.translate(x * scale, y * scale);
             context.rotate(Math.atan2(v[1], v[0]));
@@ -78,6 +79,7 @@ function drawGrid() {
         vec2.limit(p.vel, p.vel, p.maxSpeed);
         vec2.add(p.pos, p.pos, p.vel);
         vec2.normalize(p.acc, p.acc);
+        // vec2.mul([], p.vel, [0, 0])
 
 
         // context.fillStyle = 'red';
@@ -105,7 +107,7 @@ function Particle() {
     this.vel = vec2.create();
     this.acc = vec2.create();
     this.size = 7;
-    this.maxSpeed = 2;
+    this.maxSpeed = 4;
     this.prevPos = vec2.copy([], this.pos);
 }
 
