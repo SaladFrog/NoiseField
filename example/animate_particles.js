@@ -22,7 +22,6 @@ for (var i = 0; i < 300; i++) {
     particles[i] = new Particle();
 }
 
-setup();
 function setup() {
     requestAnimationFrame(setup);
     clear();
@@ -106,3 +105,5 @@ function Particle() {
     this.maxSpeed = 4;
     this.prevPos = vec2.copy([], this.pos);
 }
+
+setup();
