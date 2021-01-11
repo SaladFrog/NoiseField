@@ -104,7 +104,7 @@ function Particle() {
     this.vel = vec2.create();
     this.acc = vec2.create();
     this.size = 5;
-    this.maxSpeed = 4;
+    this.maxSpeed = 2;
     this.prevPos = vec2.copy([], this.pos);
 }
 
