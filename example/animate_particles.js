@@ -79,10 +79,7 @@ function drawGrid() {
         vec2.limit(p.vel, p.vel, p.maxSpeed);
         vec2.add(p.pos, p.pos, p.vel);
         vec2.normalize(p.acc, p.acc);
-        // vec2.mul([], p.vel, [0, 0])
 
-
-        // context.fillStyle = 'red';
         context.fillRect(p.pos[0], p.pos[1], p.size, p.size);
 
         if (p.pos[0] > width) {
@@ -106,7 +103,7 @@ function Particle() {
     this.pos = vec2.fromValues(Math.random() * width, Math.random() * height);
     this.vel = vec2.create();
     this.acc = vec2.create();
-    this.size = 7;
+    this.size = 5;
     this.maxSpeed = 4;
     this.prevPos = vec2.copy([], this.pos);
 }
