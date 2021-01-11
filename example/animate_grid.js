@@ -4,8 +4,8 @@ import vec2 from 'gl-vec2';
 const canvas = document.getElementById('canvas');
 const context = canvas.getContext('2d');
 
-var width = canvas.width = 400;
-var height = canvas.height = 400;
+var width = canvas.width = 720;
+var height = canvas.height = 720;
 
 var incriment = 0.04;
 var scale = 10;
