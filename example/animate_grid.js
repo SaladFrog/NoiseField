@@ -52,4 +52,5 @@ function drawGrid() {
         noiseZ += 0.0002;
     }
 }
+
 setup();
